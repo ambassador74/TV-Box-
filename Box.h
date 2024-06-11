@@ -3,12 +3,13 @@
 class Box : public HouseholdAppliance
 {
 private:
-	unsigned int currentChannel;
+	unsigned int channel;
 	unsigned int volume;
-	std::string screenResolution;
-	bool isOn;
+	const std::string screenResolution = "2560*1440";
+	bool isOn = false;
 public:
-	void switchChannel();
-	void switchVolume();
+	void switchChannel(unsigned int const& channel);
+	void switchVolume(unsigned int const& volume);
+	bool turnOn(bool isOn);
 };
 
